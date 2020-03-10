@@ -4,8 +4,8 @@
 
 *.c
 
-bin/
-pkg/
+bin/*
+pkg/*
 
 *.o
 *.obj
