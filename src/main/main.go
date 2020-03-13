@@ -8,11 +8,16 @@ import (
 )
 
 func main() {
-	data, err := ioutil.ReadFile((os.Args[1:])[0])
 
-	if err != nil {
-		fmt.Println("Error:", err)
+	if len(os.Args) != 1 {
+		data, err := ioutil.ReadFile((os.Args[1:])[0])
+	
+		if err != nil {
+			fmt.Println("Error:", err)
+		} else {
+			CreateFile(string(process.Data(data)))
+		}
 	} else {
-		CreateFile(string(process.Data(data)))
+		fmt.Println("Path to file was not provided")
 	}
 }
