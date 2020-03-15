@@ -7,7 +7,7 @@ import (
 	iftag "handletag/if"
 )
 
-func Tag(data *[]string, tag string, index int) *[]string {
+func Tag(allDefines map[string]map[string][]string, data *[]string, tag string, index int) *[]string {
 	if tag == tags.IF {
 		iftag.Handle(data, index)
 	} else if tag == tags.ELSE {
@@ -15,7 +15,7 @@ func Tag(data *[]string, tag string, index int) *[]string {
 	} else if tag == tags.ENDIF {
 
 	} else if tag == tags.DEFINE {
-		return define.Handle(data, index)
+		return define.Handle(allDefines, data, index)
 	}
 
 	return data

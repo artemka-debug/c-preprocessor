@@ -8,7 +8,7 @@ bin/*
 pkg/*
 
 *.in
-*.o
+*.o 
 *.obj
 .vscode/
 .idea/

@@ -1,7 +1,6 @@
 package define
 
 import (
-	"fmt"
 	"strings"
 )
 
@@ -34,7 +33,7 @@ func swapValues(expVal string, val string, expParams []string) string {
 	expToParse := val[strings.Index(val, "(") + 1:strings.Index(val, ")")]
 
 	paramsWithVals := GetParamVal(expParams, expToParse)
-	fmt.Printf("[%+v]\n", paramsWithVals)
+	//fmt.Printf("[%+v]\n", paramsWithVals)
 	expValCopy := strings.Split(expVal, " ")
 
 	for i, v := range expValCopy {
