@@ -5,4 +5,5 @@ const (
 	IF = "#if"
 	ELSE = "#else"
 	ENDIF = "#endif"
+	IFDEF = "#ifdef"
 )

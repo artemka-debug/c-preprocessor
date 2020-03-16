@@ -1,7 +1,7 @@
 package define
 
-func Handle(allDefines map[string]map[string][]string, data *[]string, index int) *[]string {
-	expVar, expVal, expParams := parseDefine((*data)[index])
+func Handle(allDefines map[string]map[string][]string, data []string, index int) *[]string {
+	expVar, expVal, expParams := parseDefine((data)[index])
 	//fmt.Printf("RESPONSE [%s] [%s] [%s]\n", expVar, expVal, expParams)
 
 	val, ok := allDefines[expVar]
@@ -13,5 +13,5 @@ func Handle(allDefines map[string]map[string][]string, data *[]string, index int
 
 	swapCallsWithDefines(data, index, expVar, expVal, expParams)
 
-	return data
+	return &data
 }

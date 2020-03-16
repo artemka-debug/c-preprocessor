@@ -4,8 +4,8 @@ import (
 	"strings"
 )
 
-func swapCallsWithDefines(data *[]string, index int, expVar string, expVal string, expParams []string) {
-	for i, str := range (*data)[index + 1:] {
+func swapCallsWithDefines(data []string, index int, expVar string, expVal string, expParams []string) {
+	for i, str := range (data)[index + 1:] {
 		divided := strings.Split(str, " ")
 
 		for ind, v := range divided {
@@ -22,7 +22,7 @@ func swapCallsWithDefines(data *[]string, index int, expVar string, expVal strin
 					}
 
 					divided[ind] =  swappedExpVal + string(divided[ind][len(divided[ind]) - 1])
-					(*data)[index + i + 1] = strings.Join(divided, " ")
+					(data)[index + i + 1] = strings.Join(divided, " ")
 				}
 			}
 		}
