@@ -6,7 +6,7 @@
 
 bin/*
 pkg/*
-
+sad
 *.in
 *.o 
 *.obj
